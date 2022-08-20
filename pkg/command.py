@@ -3,5 +3,5 @@ class Commands():
         self.commands = {}
     def add_cmd(self, name, ref):
         self.commands[name] = ref
-    async def call_cmd(self, name, client, message, args):
-        await self.commands[name](client, message, args)
+    async def call_cmd(self, name, client, message, args, players):
+        await self.commands[name](client, message, args, players)
